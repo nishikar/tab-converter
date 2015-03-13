@@ -1,6 +1,8 @@
 <textarea rows="24" cols="150">
-{% for tab_line in request.session.converted_tab  %}
-  {{ tab_line }}&#13;
-{% endfor %}
+{% if piano_tab %}
+	{% for tab_line in piano_tab %}
+	  {{ tab_line }}&#13;
+	{% endfor %}
+{% endif %}
 </textarea>
 
